@@ -30,11 +30,6 @@ jobs:
         run: chmod +x ci/build-app.sh && ci/build-app.sh
       - name: Unit-tests
         run: chmod +x ci/unit-test-app.sh && ci/unit-test-app.sh
-      - name: Upload Jar
-        uses: actions/upload-artifact@v2
-        with:
-          name: Jar
-          path: app/build/libs/app-0.1-all.jar
       - name: Upload App
         uses: actions/upload-artifact@v2
         with:
@@ -44,11 +39,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: Build
     steps:
-      - name: Downlonad Jar
-        uses: actions/download-artifact@v2
-        with:
-          name: Jar
-          path: app/build/libs/app-0.1-all.jar
       - name: Download-appV2
         uses: actions/download-artifact@v2
         with:
