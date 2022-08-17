@@ -57,6 +57,13 @@ jobs:
     runs-on: ubuntu-latest
     needs: Docker-Image
     steps:
+      - name: Download-appV3
+        uses: actions/download-artifact@v2
+        with:
+          name: AppV3
+          path: .
+      - name: Execute component test
+        run: chmod +x ci/component-test.sh && ci/component-test.sh
       - name: Execute component test
         run: chmod +x ci/component-test.sh && ci/component-test.sh
   Performance-Test:
