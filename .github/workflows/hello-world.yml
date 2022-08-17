@@ -44,16 +44,16 @@ jobs:
     runs-on: ubuntu-latest
     needs: Build
     steps:
-      - name: Download-appV2
-        uses: actions/download-artifact@v2
-        with:
-          name: App
-          path: .
       - name: Downlonad Jar
         uses: actions/download-artifact@v2
         with:
           name: Jar
           path: app/build/libs/app-0.1-all.jar
+      - name: Download-appV2
+        uses: actions/download-artifact@v2
+        with:
+          name: App
+          path: .
       - name: build docker
         run: chmod +x ci/build-docker.sh && ci/build-docker.sh
       - name: push docker
