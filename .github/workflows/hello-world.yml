@@ -7,6 +7,11 @@ jobs:
     steps:
       - name: clone-down
         uses: actions/checkout@v2
+      - name: Upload repository
+        uses: actions/upload-artifact@v2
+        with:
+          name: code
+          path: .
   Build:
     needs: Clone-down
     runs-on: ubuntu-latest
