@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 21,
+  "agentName": "inst35",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelines.actions.githubusercontent.com/zNHQUkhMjFzIYVzdUweZGyfVfvNDSbEzGcxvz1O5lE45RFko6O",
+  "gitHubUrl": "https://github.com/janpe20/github-actions-katas",
+  "workFolder": "_work"
+}
